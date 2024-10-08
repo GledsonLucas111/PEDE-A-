@@ -8,7 +8,8 @@ interface ProductProps {
   }
 }
 export default function Product(props: ProductProps) {
- const items = useCartStore((state)=> state.avaliableItems)
+ const items = useCartStore((state)=> state.avaliableItems);
+ const add = useCartStore((state)=> state.addToCart)
  let [quantity, setQuantity] = useState(1);
 
  const item = items.filter((item)=> item.id === props.params.id)
