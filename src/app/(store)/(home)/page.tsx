@@ -8,18 +8,12 @@ export default function Home() {
 const items = useCartStore((state) => state.avaliableItems);
 
   return (
-    <div className="flex flex-col h-full justify-between">
+    <div className="flex flex-col h-full justify-between ">
       <Header />
-      <div className="pb-20 flex flex-col h-full" >
-        <div>
-        </div>
-        <div>
-          <div>
+      <div className="flex flex-col h-full" >
           <Card.Root>
             <Card.Content items={items} inCart={false} url="/product"></Card.Content>
           </Card.Root>
-          </div>
-        </div>
       </div>
       <Footer />
     </div>

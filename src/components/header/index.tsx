@@ -12,8 +12,8 @@ useEffect(()=>{
   })
 })
   return(
-    <div className="w-full p-4 bg-blue shadow-sm flex items-center">
-      <p className="ml-4 text-white text-lg font-bold">ANOTA AI</p>
+    <div className="w-full p-4 bg-purple shadow-sm flex items-center">
+      <p className="ml-4 text-white text-lg font-bold">PEDE AÍ</p>
     </div>
   )
 }

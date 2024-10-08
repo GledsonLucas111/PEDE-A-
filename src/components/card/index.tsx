@@ -1,9 +1,7 @@
-import { CardActions } from "./CardActions";
 import { CardContent } from "./CardContent";
-import CardRoot from "./cardRoot";
+import CardRoot from "./CardRoot";
 
 export const Card = {
   Root: CardRoot,
   Content: CardContent,
-  Actions: CardActions
 }

@@ -5,22 +5,24 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function Footer() {
-  const [activeCart, setActiveCart] = useState(false);
   const [activeHome, setActiveHome] = useState(true);
+  const [activeCart, setActiveCart] = useState(false);
   const { push } = useRouter();
 
-  const goToCheckout = () => {
+  const goToCart = () => {
     setActiveCart(true);
-    push("/checkout");
+    setActiveHome(false);
+    push("/cart");
   };
 
   const goToHome = () => {
-    setActiveCart(false);
     setActiveHome(true);
+    setActiveCart(false);
     push("/");
   };
+
   return (
-    <footer className="w-full px-4 h-16 bg-slate-50 flex justify-between shadow fixed bottom-0">
+    <footer className="w-full px-4 h-16 bg-slate-50 flex justify-between shadow fixed bottom-0 ">
       <button
         onClick={goToHome}
         className={`flex flex-col items-center w-14 active:bg-cian rounded gap-1 ${
@@ -29,36 +31,36 @@ export default function Footer() {
       >
         <TiHomeOutline
           size="1.5rem"
-          color={`${activeHome ? "#4682A9" : "#686D76"}`}
+          color={`${activeHome ? "#440487" : "#686D76"}`}
         />
         <p
-          className={`text-xs text-blue font-bold ${
-            activeHome ? "text-blue" : "text-gray"
+          className={`text-xs font-bold ${
+            activeHome ? "text-purple" : "text-gray"
           }`}
         >
           Inicio
         </p>
-        {activeHome ? <p className="w-full h-1 bg-blue rounded"></p> : ""}
+        {activeHome ? <p className="w-full h-1 bg-purple rounded"></p> : ""}
       </button>
 
       <button
-        onClick={goToCheckout}
+        onClick={goToCart}
         className={`flex flex-col items-center w-14 active:bg-cian rounded gap-1 ${
           activeCart ? "justify-end" : "justify-center"
         }`}
       >
         <IoCartOutline
           size="1.5rem"
-          color={`${activeCart ? "#4682A9" : "#686D76"}`}
+          color={`${activeCart ? "#440487" : "#686D76"}`}
         />
         <p
-          className={`text-xs text-blue font-bold ${
-            activeCart ? "text-blue" : "text-gray"
+          className={`text-xs font-bold ${
+            activeCart ? "text-purple" : "text-gray"
           }`}
         >
           Carrinho
         </p>
-        {activeCart ? <p className="w-full h-1 bg-blue rounded"></p> : ""}
+        {activeCart ? <p className="w-full h-1 bg-purple rounded"></p> : ""}
       </button>
     </footer>
   );

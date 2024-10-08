@@ -17,7 +17,8 @@ const config: Config = {
         'red': '#B43F3F',
         'blue': '#4682A9',
         'cian': '#91C8E4',
-        'gray': '#686D76'
+        'gray': '#686D76',
+        'purple':'#440487',
       }
     },
   },
