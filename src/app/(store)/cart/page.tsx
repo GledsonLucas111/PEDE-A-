@@ -1,5 +1,6 @@
 "use client";
 import { Card } from "@/components/card";
+import { Footer } from "@/components/footer";
 import { useCartStore } from "@/globalStateCar/CartStore";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -39,7 +40,7 @@ export default function Checkout() {
           <Card.Content items={items} inCart={true} quantityInCart={1}></Card.Content>
         </Card.Root>
 
-        <div className="pb-24 flex justify-center">
+        <div className="pb-24 pt-4 flex justify-center">
         <button
           onClick={() => push("/")}
           className=" h-10 text-red rounded font-bold flex items-center justify-center"
@@ -50,12 +51,9 @@ export default function Checkout() {
 
       </div>
 
-      <footer className="w-full p-4  bg-slate-50 shadow flex items-center fixed bottom-0">
-        <button className="w-full h-10 bg-green text-white active:bg-green300 rounded font-bold flex items-center justify-between px-2">
-          <p className="">Continuar</p>
-          <p className="">{sumPrice()}</p>
-        </button>
-      </footer>
+      <Footer.Root>
+        <Footer.Actions sumPrice={sumPrice} text="Confirmar"/>
+      </Footer.Root>
     </div>
   );
 }

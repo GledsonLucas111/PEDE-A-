@@ -9,6 +9,7 @@ useEffect(()=>{
   window.addEventListener('scroll', ()=> {
       let scrollTop = window.scrollY;
       console.log(scrollTop)
+      // 61 quando passa do header
   })
 })
   return(

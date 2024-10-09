@@ -1,4 +1,5 @@
 "use client";
+import { Footer } from "@/components/footer";
 import { useCartStore } from "@/globalStateCar/CartStore";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -47,27 +48,24 @@ export default function Product(props: ProductProps) {
         </p>
       </div>
 
-      <footer className="w-full p-4  gap-7 bg-slate-50 shadow flex items-center justify-between fixed bottom-0">
+      <Footer.Root>
         <div className="flex gap-4 items-center">
           <button
-            onClick={() => setQuantity(quantity--)}
-            className="font-bold text-red text-2xl"
+            onClick={() => setQuantity(quantity-1)}
+            className="font-bold text-purple text-2xl"
           >
             <p>-</p>
           </button>
-          <p>{quantity}</p>
+          <p className="font-bold text-purple">{quantity}</p>
           <button
-            onClick={() => setQuantity(quantity++)}
-            className="font-bold text-red text-2xl"
+            onClick={() => setQuantity(quantity+1)}
+            className="font-bold text-purple text-2xl"
           >
             <p>+</p>
           </button>
         </div>
-        <button className="w-full h-10 bg-green text-white active:bg-green300 rounded font-bold flex items-center justify-between px-2" onClick={()=> addToCart(item[0])}>
-          <p className="">Adicionar</p>
-          <p className="">{sumPrice()}</p>
-        </button>
-      </footer>
+        <Footer.Actions sumPrice={sumPrice} text="Adicionar" />
+      </Footer.Root>
     </div>
   );
 }
