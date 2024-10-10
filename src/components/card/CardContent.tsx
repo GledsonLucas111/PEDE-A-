@@ -23,7 +23,7 @@ export function CardContent({
       }`}
     >
       {items.map((item) => (
-        <button
+        <div
           key={item.id}
           onClick={url ? () => push(`${url}/${item.id}`) : () => null}
           className={`items-center ${inCart?"flex  justify-between": "" }`}
@@ -57,7 +57,7 @@ export function CardContent({
           {inCart ? null : (
             <p className="w-full border-b border-white600 pt-1"></p>
           )}
-        </button>
+        </div>
       ))}
     </div>
   );

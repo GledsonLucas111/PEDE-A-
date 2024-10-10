@@ -1,3 +1,5 @@
+"use client";
+
 import FooterActions from "./FooterActions";
 import FooterButton from "./FooterButton";
 import FooterRoot from "./FooterRoot";

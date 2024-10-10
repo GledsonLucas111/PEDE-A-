@@ -1,3 +1,5 @@
+"use client";
+
 import { CardContent } from "./CardContent";
 import CardRoot from "./CardRoot";
 

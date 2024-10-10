@@ -1,5 +1,6 @@
 "use client";
 import { Card } from "@/components/card";
+import Category from "@/components/category";
 import { Footer } from "@/components/footer";
 import Header from "@/components/header";
 import { useCartStore } from "@/globalStateCar/CartStore";
@@ -28,6 +29,7 @@ export default function Home() {
   return (
     <div className="flex flex-col h-full justify-between ">
       <Header />
+      <Category />
       <div className="flex flex-col h-full">
         <Card.Root>
           <Card.Content

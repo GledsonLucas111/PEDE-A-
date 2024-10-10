@@ -1,4 +1,5 @@
 "use client";
+
 import { Footer } from "@/components/footer";
 import { useCartStore } from "@/globalStateCar/CartStore";
 import { useRouter } from "next/navigation";
@@ -27,10 +28,19 @@ export default function Product(props: ProductProps) {
       currency: "BRL",
     });
   }
+  function addItemCart(){
 
+    addToCart(item[0]);
+  }
+  console.log(items)
   return (
     <div className="flex flex-col">
-      <button className="h-10 w-10 fixed top-0 bg-white rounded-full flex items-center justify-center m-2" onClick={()=> push("/")}><MdArrowBackIosNew size="1.5rem"/></button>
+      <button
+        className="h-10 w-10 fixed top-0 bg-slate-50 rounded-full flex items-center justify-center m-2"
+        onClick={() => push("/")}
+      >
+        <p className="text-2xl text-black"><MdArrowBackIosNew/></p>
+      </button>
       <img
         className="min-w-full max-w-0 min-h-80 max-h-0 object-cover shadow-lg border-white600 "
         src={item[0].image}
@@ -51,20 +61,26 @@ export default function Product(props: ProductProps) {
       <Footer.Root>
         <div className="flex gap-4 items-center">
           <button
-            onClick={() => setQuantity(quantity-1)}
-            className="font-bold text-purple text-2xl"
+            onClick={() =>
+              setQuantity(quantity > 1 ? quantity - 1 : quantity = 1)
+            }
+            className={`font-bold text-purple text-2xl `}
           >
             <p>-</p>
           </button>
           <p className="font-bold text-purple">{quantity}</p>
           <button
-            onClick={() => setQuantity(quantity+1)}
+            onClick={() => setQuantity(quantity + 1)}
             className="font-bold text-purple text-2xl"
           >
             <p>+</p>
           </button>
         </div>
-        <Footer.Actions sumPrice={sumPrice} text="Adicionar" />
+        <Footer.Actions
+          sumPrice={sumPrice}
+          text="Adicionar"
+          addToCart={() => addToCart(item[0])}
+        />
       </Footer.Root>
     </div>
   );
