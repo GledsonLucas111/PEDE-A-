@@ -1,6 +1,6 @@
 "use client";
 import { Card } from "@/components/card";
-import Category from "@/components/category";
+import Category from "@/app/(store)/(home)/category";
 import { Footer } from "@/components/footer";
 import Header from "@/components/header";
 import { useCartStore } from "@/globalStateCar/CartStore";
@@ -10,7 +10,7 @@ import { IoCartOutline } from "react-icons/io5";
 import { TiHomeOutline } from "react-icons/ti";
 
 export default function Home() {
-  const items = useCartStore((state) => state.avaliableItems);
+  const items = useCartStore((state) => state.available);
   const [activeHome, setActiveHome] = useState(true);
   const [activeCart, setActiveCart] = useState(false);
   const { push } = useRouter();

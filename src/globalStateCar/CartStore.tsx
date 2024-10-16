@@ -1,18 +1,17 @@
 import { initialItems } from "@/data/dataProducts";
 import { create } from "zustand";
 
-type Item = {
+export type Item = {
   id: string;
   name: string;
   description: string;
   price: string;
   image: string;
-  quantity?: number;
 };
 
 
 type CartStore = {
-  avaliableItems: Item[];
+  available: Item[];
   cart: Item[];
   addToCart: (item: Item) => void;
   removeFromCart: (id: string) => void;
@@ -21,7 +20,7 @@ type CartStore = {
 export const useCartStore = create<CartStore>((set) => {
   return {
     cart: [],
-    avaliableItems: initialItems,
+    available: initialItems,
     addToCart: (item: Item) =>
       set((state) => ({ cart: [...state.cart, item] })),
     removeFromCart: (id: string) =>

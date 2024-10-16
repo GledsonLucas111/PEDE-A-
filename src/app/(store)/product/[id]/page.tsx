@@ -3,7 +3,7 @@
 import { Footer } from "@/components/footer";
 import { useCartStore } from "@/globalStateCar/CartStore";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { MdArrowBackIosNew } from "react-icons/md";
 
 interface ProductProps {
@@ -12,7 +12,7 @@ interface ProductProps {
   };
 }
 export default function Product(props: ProductProps) {
-  const items = useCartStore((state) => state.avaliableItems);
+  const items = useCartStore((state) => state.available);
   const addToCart = useCartStore((state) => state.addToCart);
   const { push } = useRouter();
   let [quantity, setQuantity] = useState(1);

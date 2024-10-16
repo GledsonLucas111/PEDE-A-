@@ -1,4 +1,5 @@
-export const initialItems = [{
+
+export const initialItems: any = [{
   id: "1",
   name: 'PRODUTO 1',
   description: 'Os melhores momentos da vida pedem um açaí',

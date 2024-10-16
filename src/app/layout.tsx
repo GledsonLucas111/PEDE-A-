@@ -10,7 +10,6 @@ const lato = Lato({
 export const metadata: Metadata = {
   title: "PEDE AI",
   description: "APP DE PEDIDOS",
-  
 };
 
 export default function RootLayout({

@@ -8,12 +8,14 @@ interface CardContentProps {
   url?: string;
   inCart: boolean;
   quantityInCart?: number;
+  removeCart?: (id: string) => any;
 }
 
 export function CardContent({
   items,
   url,
   inCart,
+  removeCart
 }: CardContentProps) {
   const { push } = useRouter();
   return (

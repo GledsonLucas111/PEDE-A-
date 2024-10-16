@@ -9,7 +9,8 @@ import { MdArrowBackIosNew } from "react-icons/md";
 export default function Checkout() {
   const { push } = useRouter();
   const items = useCartStore((state) => state.cart);
-  
+  const removeCart = useCartStore((state) => state.removeFromCart)
+
   useEffect(() => {}, [items]);
 
 
@@ -37,7 +38,7 @@ export default function Checkout() {
 
       <div className="flex flex-col ">
         <Card.Root>
-          <Card.Content items={items} inCart={true} quantityInCart={1}></Card.Content>
+          <Card.Content items={items} inCart={true} quantityInCart={1} removeCart={()=> removeCart("1")}/>
         </Card.Root>
 
         <div className="pb-24 pt-4 flex justify-center">
@@ -52,7 +53,7 @@ export default function Checkout() {
       </div>
 
       <Footer.Root>
-        <Footer.Actions sumPrice={sumPrice} text="Confirmar"/>
+        <Footer.Actions sumPrice={sumPrice} text="Confirmar" />
       </Footer.Root>
     </div>
   );
