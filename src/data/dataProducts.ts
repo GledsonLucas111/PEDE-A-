@@ -45,7 +45,7 @@ export const initialItems: any = [
     name: "Açaí sem complementos 300ml",
     description: "Os melhores momentos da vida pedem um açaí",
     price: "13.00",
-    image: "/images/acai-2.jpg",
+    image: "/images/acai-copo.jpg",
     category: "Açai sem complementos"
   },
   ,
@@ -54,7 +54,7 @@ export const initialItems: any = [
     name: "Açaí sem complementos 600ml",
     description: "Os melhores momentos da vida pedem um açaí",
     price: "16.00",
-    image: "/images/acai-2.jpg",
+    image: "/images/acai-copo.jpg",
     category: "Açai sem complementos"
   },
   {
@@ -62,7 +62,7 @@ export const initialItems: any = [
     name: "Açaí sem complementos 900ml",
     description: "Os melhores momentos da vida pedem um açaí",
     price: "19.00",
-    image: "/images/acai-2.jpg",
+    image: "/images/acai-copo.jpg",
     category: "Açai sem complementos"
   },
   {
@@ -70,7 +70,7 @@ export const initialItems: any = [
     name: "Cremes 500ml",
     description: "Os melhores momentos da vida pedem um açaí",
     price: "15.00",
-    image: "/images/acai-2.jpg",
+    image: "/images/creme.png",
     category: "Cremes"
   },
   {
@@ -78,7 +78,7 @@ export const initialItems: any = [
     name: "Cremes 700ml",
     description: "Os melhores momentos da vida pedem um açaí",
     price: "20.00",
-    image: "/images/acai-2.jpg",
+    image: "/images/creme.png",
     category: "Cremes"
   },
   {
@@ -86,7 +86,7 @@ export const initialItems: any = [
     name: "Barca P",
     description: "Os melhores momentos da vida pedem um açaí",
     price: "20.00",
-    image: "/images/acai-2.jpg",
+    image: "/images/barca.jpg",
     category: "Barca"
   },
   {
@@ -94,7 +94,7 @@ export const initialItems: any = [
     name: "Barca M",
     description: "Os melhores momentos da vida pedem um açaí",
     price: "35.00",
-    image: "/images/acai-2.jpg",
+    image: "/images/barca.jpg",
     category: "Barca"
   },
   {
@@ -102,7 +102,7 @@ export const initialItems: any = [
     name: "Barca G",
     description: "Os melhores momentos da vida pedem um açaí",
     price: "45.00",
-    image: "/images/acai-2.jpg",
+    image: "/images/barca.jpg",
     category: "Barca"
   },
 ];

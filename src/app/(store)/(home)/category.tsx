@@ -4,25 +4,30 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { useState } from "react";
 
 // swiper modules
 
-export default function Category() {
-  const CategoryItems = [
-    "Açai no copo",
-    "Açai na tigela",
-    "Açaí sem complementos",
-    "Cremes",
-    "Barcas",
-  ];
-
+interface CategoryProps {
+  categoryItems: string[];
+}
+export default function Category({ categoryItems }: CategoryProps) {
+  const [active, setActive] = useState("");
   return (
     <div className="bg-white600 p-1">
-      <Swiper
-        slidesPerView={2}
-      >
-        {CategoryItems.map((category) => {
-          return <SwiperSlide className=""><button className="font-bold text-sm text-gray400 whitespace-nowrap">{category}</button></SwiperSlide>;
+      <Swiper slidesPerView={2}>
+        {categoryItems.map((category) => {
+          return (
+            <SwiperSlide className="" key={category}>
+              <a
+                className={`font-bold text-sm  whitespace-nowrap ${category === "Açai no copo"? "text-purple": "text-gray400"}`}
+                href={`#${category}`}
+              >
+                {category}
+                
+              </a>
+            </SwiperSlide>
+          );
         })}
       </Swiper>
     </div>

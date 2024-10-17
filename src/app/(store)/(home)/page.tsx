@@ -14,24 +14,40 @@ export default function Home() {
   const [activeHome, setActiveHome] = useState(true);
   const [activeCart, setActiveCart] = useState(false);
   const { push } = useRouter();
+  const category = [
+    "Açai no copo",
+    "Açai na tigela",
+    "Açai sem complementos",
+    "Cremes",
+    "Barca",
+  ];
+  let newItems: any = [];
 
-  const goToHome = () => {
+  function goToHome() {
     setActiveHome(true);
     setActiveCart(false);
     push("/");
-  };
-  const goToCart = () => {
+  }
+  function goToCart() {
     setActiveCart(true);
     setActiveHome(false);
     push("/cart");
-  };
+  }
+  function filterItems() {
+    for (let i = 0; i < category.length; i++) {
+      newItems.push(items.filter((item) => item.category === category[i]));
+    }
+    return newItems;
+  }
 
   return (
     <div className="flex flex-col h-full justify-between ">
       <Header />
-      <Category />
+      <Category categoryItems={category} />
       <div className="flex flex-col h-full">
-        <Card items={items} url="/product" />
+        {filterItems().map((items: any) => {
+          return <Card items={items} key={items[0].id}/>;
+        })}
       </div>
 
       <Footer.Root>
