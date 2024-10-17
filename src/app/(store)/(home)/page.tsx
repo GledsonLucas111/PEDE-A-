@@ -1,5 +1,4 @@
 "use client";
-import { Card } from "@/components/card";
 import Category from "@/app/(store)/(home)/category";
 import { Footer } from "@/components/footer";
 import Header from "@/components/header";
@@ -8,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { IoCartOutline } from "react-icons/io5";
 import { TiHomeOutline } from "react-icons/ti";
+import { Card } from "./card";
 
 export default function Home() {
   const items = useCartStore((state) => state.available);
@@ -31,13 +31,7 @@ export default function Home() {
       <Header />
       <Category />
       <div className="flex flex-col h-full">
-        <Card.Root>
-          <Card.Content
-            items={items}
-            inCart={false}
-            url="/product"
-          ></Card.Content>
-        </Card.Root>
+        <Card items={items} url="/product" />
       </div>
 
       <Footer.Root>
@@ -54,7 +48,6 @@ export default function Home() {
           text="Carrinho"
         ></Footer.Button>
       </Footer.Root>
-      
     </div>
   );
 }

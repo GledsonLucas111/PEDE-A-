@@ -9,21 +9,20 @@ import "swiper/css/navigation";
 
 export default function Category() {
   const CategoryItems = [
-    "Açai puro",
-    "Acai + complemetos",
-    "Açai + cremes",
-    "Cremes sem complementos",
+    "Açai no copo",
+    "Açai na tigela",
+    "Açaí sem complementos",
+    "Cremes",
     "Barcas",
   ];
 
   return (
-    <div className="bg-white600">
+    <div className="bg-white600 p-1">
       <Swiper
-        spaceBetween={20}
-        slidesPerView={3}
+        slidesPerView={2}
       >
         {CategoryItems.map((category) => {
-          return <div><SwiperSlide className=""><p className="font-bold text-sm">{category}</p></SwiperSlide></div>;
+          return <SwiperSlide className=""><button className="font-bold text-sm text-gray400 whitespace-nowrap">{category}</button></SwiperSlide>;
         })}
       </Swiper>
     </div>

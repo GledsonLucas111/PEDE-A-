@@ -1,10 +1,10 @@
 "use client";
-import { Card } from "@/components/card";
 import { Footer } from "@/components/footer";
 import { useCartStore } from "@/globalStateCar/CartStore";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { MdArrowBackIosNew } from "react-icons/md";
+import { CardCart } from "./card";
 
 export default function Checkout() {
   const { push } = useRouter();
@@ -37,9 +37,7 @@ export default function Checkout() {
       </div>
 
       <div className="flex flex-col ">
-        <Card.Root>
-          <Card.Content items={items} inCart={true} quantityInCart={1} removeCart={()=> removeCart("1")}/>
-        </Card.Root>
+        <CardCart items={items}/>
 
         <div className="pb-24 pt-4 flex justify-center">
         <button

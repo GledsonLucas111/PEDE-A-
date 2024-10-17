@@ -22,7 +22,7 @@ export default function FooterButton({ goTo, active, icon, text }: ButtonProps) 
         {icon}
       </p>
       <p
-        className={`text-xs font-bold ${active ? "text-purple" : "text-gray"}`}
+        className={`text-xs ${active ? "text-purple" : "text-gray"}`}
       >
         {text}
       </p>
