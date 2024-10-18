@@ -15,11 +15,11 @@ export default function Home() {
   const [activeCart, setActiveCart] = useState(false);
   const { push } = useRouter();
   const category = [
-    "Açai no copo",
-    "Açai na tigela",
-    "Açai sem complementos",
-    "Cremes",
-    "Barca",
+    "Bolos",
+    "Fatias",
+    "Copo da felicidade",
+    "Bolo no pote",
+    "Brownies",
   ];
   let newItems: any = [];
 
@@ -35,7 +35,7 @@ export default function Home() {
   }
   function filterItems() {
     for (let i = 0; i < category.length; i++) {
-      newItems.push(items.filter((item) => item.category === category[i]));
+      newItems.push(items.filter((item) => item.category?.toLocaleLowerCase() === category[i]?.toLocaleLowerCase()));
     }
     return newItems;
   }
@@ -46,7 +46,7 @@ export default function Home() {
       <Category categoryItems={category} />
       <div className="flex flex-col h-full">
         {filterItems().map((items: any) => {
-          return <Card items={items} key={items[0].id}/>;
+          return <Card items={items} key={items[0]?.id}/>;
         })}
       </div>
 

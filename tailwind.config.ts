@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        'primary':'#8c996a',
         'orange': '#FF8225',
         'green': '#008000',
         'green300':'#1ca51c',
@@ -20,6 +21,7 @@ const config: Config = {
         'gray': '#686D76',
         'gray400': '#464646',
         'purple':'#440487',
+        'brown': '#5e3e27',
       }
     },
   },

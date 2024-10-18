@@ -1,108 +1,100 @@
 export const initialItems: any = [
   {
     id: "1",
-    name: "Açaí no copo 300ml",
+    name: "Bolo",
     description: "Os melhores momentos da vida pedem um açaí",
-    price: "9.00",
-    image: "/images/acai-2.jpg",
-    category: "Açai no copo"
+    price: "80.00",
+    image: "/images/bolo1.jpeg",
+    category: "Bolos"
   },
   {
     id: "2",
-    name: "Açaí no copo 400ml",
+    name: "Bolo",
     description: "Os melhores momentos da vida pedem um açaí",
-    price: "12.00",
-    image: "/images/acai-2.jpg",
-    category: "Açai no copo"
+    price: "100.00",
+    image: "/images/bolo2.jpeg",
+    category: "Bolos"
   },
   {
     id: "3",
-    name: "Açaí no copo 500ml",
+    name: "Bolo",
     description: "Os melhores momentos da vida pedem um açaí",
-    price: "14.00",
-    image: "/images/acai-2.jpg",
-    category: "Açai no copo"
+    price: "120.00",
+    image: "/images/bolo3.jpeg",
+    category: "Bolos"
   },
   {
     id: "4",
-    name: "Açaí na tigela 700ml",
+    name: "Bolo",
     description: "Os melhores momentos da vida pedem um açaí",
-    price: "18.00",
-    image: "/images/acai1.jpeg",
-    category: "Açai na tigela"
+    price: "140.00",
+    image: "/images/bolo4.jpeg",
+    category: "Bolos"
   },
   ,
   {
     id: "5",
-    name: "Açaí na tigela 1L",
+    name: "Fatia",
     description: "Os melhores momentos da vida pedem um açaí",
-    price: "23.00",
-    image: "/images/acai1.jpeg",
-    category: "Açai na tigela"
+    price: "15.00",
+    image: "/images/brownie.jpeg",
+    category: "Fatias"
   },
   {
     id: "6",
-    name: "Açaí sem complementos 300ml",
+    name: "Fatia",
     description: "Os melhores momentos da vida pedem um açaí",
-    price: "13.00",
-    image: "/images/acai-copo.jpg",
-    category: "Açai sem complementos"
+    price: "15.00",
+    image: "/images/brownie.jpeg",
+    category: "Fatias"
   },
   ,
   {
     id: "7",
-    name: "Açaí sem complementos 600ml",
+    name: "Copo da felicidade",
     description: "Os melhores momentos da vida pedem um açaí",
-    price: "16.00",
-    image: "/images/acai-copo.jpg",
-    category: "Açai sem complementos"
+    price: "12.00",
+    image: "/images/copo1.jpg",
+    category: "Copo da felicidade"
   },
   {
     id: "8",
-    name: "Açaí sem complementos 900ml",
+    name: "Copo da felicidade",
     description: "Os melhores momentos da vida pedem um açaí",
-    price: "19.00",
-    image: "/images/acai-copo.jpg",
-    category: "Açai sem complementos"
+    price: "12.00",
+    image: "/images/copo2.jpeg",
+    category: "Copo da felicidade"
   },
   {
     id: "9",
-    name: "Cremes 500ml",
+    name: "Bolo no pote",
     description: "Os melhores momentos da vida pedem um açaí",
-    price: "15.00",
-    image: "/images/creme.png",
-    category: "Cremes"
+    price: "10.00",
+    image: "/images/pote.jpeg",
+    category: "Bolo no pote"
+  },
+  {
+    id: "10",
+    name: "Bolo no pote",
+    description: "Os melhores momentos da vida pedem um açaí",
+    price: "10.00",
+    image: "/images/pote.jpeg",
+    category: "Bolo no pote"
   },
   {
     id: "10",
     name: "Cremes 700ml",
     description: "Os melhores momentos da vida pedem um açaí",
     price: "20.00",
-    image: "/images/creme.png",
-    category: "Cremes"
+    image: "/images/brownie.jpeg",
+    category: "Brownies"
   },
   {
-    id: "11",
-    name: "Barca P",
+    id: "10",
+    name: "Cremes 700ml",
     description: "Os melhores momentos da vida pedem um açaí",
     price: "20.00",
-    image: "/images/barca.jpg",
-    category: "Barca"
-  },
-  {
-    id: "12",
-    name: "Barca M",
-    description: "Os melhores momentos da vida pedem um açaí",
-    price: "35.00",
-    image: "/images/barca.jpg",
-    category: "Barca"
-  },
-  {
-    id: "13",
-    name: "Barca G",
-    description: "Os melhores momentos da vida pedem um açaí",
-    price: "45.00",
-    image: "/images/barca.jpg",
-    category: "Barca"
-  },
+    image: "/images/brownie.jpeg",
+    category: "Brownies"
+  }
 ];

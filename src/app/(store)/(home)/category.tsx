@@ -14,18 +14,19 @@ interface CategoryProps {
 export default function Category({ categoryItems }: CategoryProps) {
   const [active, setActive] = useState("");
   return (
-    <div className="bg-white600 p-1">
-      <Swiper slidesPerView={2}>
+    <div className="bg-white600 ">
+      <Swiper slidesPerView={3} className="">
         {categoryItems.map((category) => {
           return (
-            <SwiperSlide className="" key={category}>
+            <SwiperSlide key={category} >
               <a
-                className={`font-bold text-sm  whitespace-nowrap ${category === "Açai no copo"? "text-purple": "text-gray400"}`}
+                className={`font-bold text-sm  whitespace-nowrap ${category === "Bolos"? "text-brown ": "text-gray400"}`}
                 href={`#${category}`}
               >
                 {category}
                 
               </a>
+              {category === "Bolos"? <p className="w-full border-2 rounded-xl border-brown "/>: null}
             </SwiperSlide>
           );
         })}

@@ -10,8 +10,8 @@ useEffect(()=>{
   })
 })
   return(
-    <div className="w-full p-4 h-14 bg-purple shadow-sm flex items-center">
-      <p className="ml-4 text-white text-lg font-bold">PEDE AÍ</p>
+    <div className="w-full p-4 h-14 bg-primary shadow-sm flex items-center gap-2">
+      <p className="ml-4 text-white text-lg font-bold"> Vanilla Doces </p>
     </div>
   )
 }
