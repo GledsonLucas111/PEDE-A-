@@ -4,10 +4,9 @@ import { useRouter } from "next/navigation";
 
 interface CardContentProps {
   items: any[];
-  url?: string;
 }
 
-export function Card({ items, url }: CardContentProps) {
+export function Card({ items }: CardContentProps) {
   const { push } = useRouter();
 
   return (

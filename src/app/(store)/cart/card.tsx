@@ -5,14 +5,14 @@ import { HiTrash } from "react-icons/hi2";
 
 interface CardContentProps {
   items: any[];
-  removeCart?: (id: string) => any;
+  removeCart: (id: string) => any;
 }
 
 export function CardCart({ items, removeCart }: CardContentProps) {
   return (
-    <div className="`flex flex-col gap-5 justify-center px-2 pt-16">
+    <div className="`flex flex-col justify-center px-2 pt-16 gap-2">
       {items.map((item) => (
-        <div key={item.id} className="items-center flex  justify-between">
+        <div key={item.id} className="items-center flex justify-between pb-3" >
           <section className="flex justify-between gap-2 ">
               <Image
                 src={item.image}
@@ -33,7 +33,7 @@ export function CardCart({ items, removeCart }: CardContentProps) {
             </div>
           </section>
           <section className="flex gap-1 items-center">
-            <button className="h-7 text-red mr-3 text-xl text-center active:text-green">
+            <button className="h-7 text-red mr-1 text-xl text-center active:bg-red active:text-white rounded ease-in-out" onClick={()=>removeCart(item.id)}>
               <HiTrash />
             </button>
           </section>

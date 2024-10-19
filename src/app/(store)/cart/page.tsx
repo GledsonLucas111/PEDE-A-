@@ -31,15 +31,15 @@ export default function Checkout() {
     <div className="w-full h-full flex flex-col justify-between">
       <div className="flex p-4 w-full bg-slate-50 items-center gap-4 font-bold fixed top-0">
         <button onClick={() => push("/")}>
-          <MdArrowBackIosNew size="1.5rem" />
+          <p className="text-2xl text-gray400"><MdArrowBackIosNew /></p>
         </button>
-        <p className="">Carrinho</p>
+        <p className="text-gray400">Carrinho</p>
       </div>
 
       <div className="flex flex-col ">
-        <CardCart items={items}/>
+        <CardCart items={items} removeCart={removeCart}/>
 
-        <div className="pb-24 pt-4 flex justify-center">
+        <div className="pb-24  flex justify-center">
         <button
           onClick={() => push("/")}
           className=" h-10 text-red rounded font-bold flex items-center justify-center"

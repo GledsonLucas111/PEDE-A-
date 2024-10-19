@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         'primary':'#8c996a',
+        'primaryAct': '#abbc7a',
         'orange': '#FF8225',
         'green': '#008000',
         'green300':'#1ca51c',

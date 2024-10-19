@@ -51,16 +51,16 @@ export const initialItems: any = [
   ,
   {
     id: "7",
-    name: "Copo da felicidade",
-    description: "Os melhores momentos da vida pedem um açaí",
+    name: "Copo da felicidade 250ml",
+    description: "Copo da Felicidade, com mousse de maracujá e um delicioso bolo de chocolate",
     price: "12.00",
     image: "/images/copo1.jpg",
     category: "Copo da felicidade"
   },
   {
     id: "8",
-    name: "Copo da felicidade",
-    description: "Os melhores momentos da vida pedem um açaí",
+    name: "Copo da felicidade 250ml",
+    description: "Copo da Felicidade, com mousse de maracujá e um delicioso bolo de chocolate",
     price: "12.00",
     image: "/images/copo2.jpeg",
     category: "Copo da felicidade"
@@ -68,7 +68,7 @@ export const initialItems: any = [
   {
     id: "9",
     name: "Bolo no pote",
-    description: "Os melhores momentos da vida pedem um açaí",
+    description: "Bolo de chocolate com mousse de maracujá",
     price: "10.00",
     image: "/images/pote.jpeg",
     category: "Bolo no pote"
@@ -76,24 +76,24 @@ export const initialItems: any = [
   {
     id: "10",
     name: "Bolo no pote",
-    description: "Os melhores momentos da vida pedem um açaí",
+    description: "Bolo de chocolate com mousse de maracujá",
     price: "10.00",
     image: "/images/pote.jpeg",
     category: "Bolo no pote"
   },
   {
-    id: "10",
-    name: "Cremes 700ml",
+    id: "11",
+    name: "Brownie",
     description: "Os melhores momentos da vida pedem um açaí",
-    price: "20.00",
+    price: "5.00",
     image: "/images/brownie.jpeg",
     category: "Brownies"
   },
   {
-    id: "10",
-    name: "Cremes 700ml",
+    id: "12",
+    name: "Brownie",
     description: "Os melhores momentos da vida pedem um açaí",
-    price: "20.00",
+    price: "8.00",
     image: "/images/brownie.jpeg",
     category: "Brownies"
   }

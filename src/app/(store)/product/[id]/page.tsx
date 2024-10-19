@@ -28,18 +28,14 @@ export default function Product(props: ProductProps) {
       currency: "BRL",
     });
   }
-  function addItemCart(){
 
-    addToCart(item[0]);
-  }
-  console.log(items)
   return (
     <div className="flex flex-col">
       <button
         className="h-10 w-10 fixed top-0 bg-slate-50 rounded-full flex items-center justify-center m-2"
         onClick={() => push("/")}
       >
-        <p className="text-2xl text-black"><MdArrowBackIosNew/></p>
+        <p className="text-2xl text-primary"><MdArrowBackIosNew/></p>
       </button>
       <img
         className="min-w-full max-w-0 min-h-80 max-h-0 object-cover shadow-lg border-white600 "
@@ -48,9 +44,9 @@ export default function Product(props: ProductProps) {
       />
 
       <div className="flex pl-5 pt-4 flex-col">
-        <p className="block font-bold text-lg">{item[0].name}</p>
-        <p>{item[0].description}</p>
-        <p className=" ">
+        <p className="block font-bold text-lg text-gray400">{item[0].name}</p>
+        <p className="text-gray font-bold">{item[0].description}</p>
+        <p className="text-gray400 ">
           {JSON.parse(item[0].price).toLocaleString("pt-BR", {
             style: "currency",
             currency: "BRL",
@@ -59,19 +55,20 @@ export default function Product(props: ProductProps) {
       </div>
 
       <Footer.Root>
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-4 items-center px-5">
           <button
             onClick={() =>
               setQuantity(quantity > 1 ? quantity - 1 : quantity = 1)
             }
-            className={`font-bold text-purple text-2xl `}
+            className={`font-bold text-2xl ${quantity === 1?"text-gray":"text-primary"}`}
+ 
           >
             <p>-</p>
           </button>
-          <p className="font-bold text-purple">{quantity}</p>
+          <p className="font-bold text-gray400">{quantity}</p>
           <button
             onClick={() => setQuantity(quantity + 1)}
-            className="font-bold text-purple text-2xl"
+            className="font-bold text-primary text-2xl"
           >
             <p>+</p>
           </button>
