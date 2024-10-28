@@ -23,7 +23,7 @@ export function Card({ items }: CardContentProps) {
         <div
           key={item.id}
           onClick={() => push(`product/${item.id}`)}
-          className="items-center "
+          className="items-center"
         >
           <section className="flex justify-between">
             <div className="flex flex-col items-start">

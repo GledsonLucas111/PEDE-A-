@@ -98,3 +98,11 @@ export const initialItems: any = [
     category: "Brownies"
   }
 ];
+
+export const initalCategory: any = [
+  "Bolos",
+  "Fatias",
+  "Copo da felicidade",
+  "Bolo no pote",
+  "Brownies"
+]

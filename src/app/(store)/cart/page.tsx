@@ -1,6 +1,6 @@
 "use client";
 import { Footer } from "@/components/footer";
-import { useCartStore } from "@/globalStateCar/CartStore";
+import { useCartStore } from "@/globalState/GlobalState";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { MdArrowBackIosNew } from "react-icons/md";

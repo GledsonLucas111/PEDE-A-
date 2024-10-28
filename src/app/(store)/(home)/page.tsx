@@ -2,25 +2,20 @@
 import Category from "@/app/(store)/(home)/category";
 import { Footer } from "@/components/footer";
 import Header from "@/components/header";
-import { useCartStore } from "@/globalStateCar/CartStore";
+import { useCartStore } from "@/globalState/GlobalState";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { IoCartOutline } from "react-icons/io5";
 import { TiHomeOutline } from "react-icons/ti";
 import { Card } from "./card";
+import { initalCategory } from "@/data/dataProducts";
 
 export default function Home() {
   const items = useCartStore((state) => state.available);
   const [activeHome, setActiveHome] = useState(true);
   const [activeCart, setActiveCart] = useState(false);
   const { push } = useRouter();
-  const category = [
-    "Bolos",
-    "Fatias",
-    "Copo da felicidade",
-    "Bolo no pote",
-    "Brownies",
-  ];
+
   let newItems: any = [];
 
   function goToHome() {
@@ -34,8 +29,8 @@ export default function Home() {
     push("/cart");
   }
   function filterItems() {
-    for (let i = 0; i < category.length; i++) {
-      newItems.push(items.filter((item) => item.category?.toLocaleLowerCase() === category[i]?.toLocaleLowerCase()));
+    for (let i = 0; i < initalCategory.length; i++) {
+      newItems.push(items.filter((item) => item.category?.toLocaleLowerCase() === initalCategory[i]?.toLocaleLowerCase()));
     }
     return newItems;
   }
@@ -43,7 +38,7 @@ export default function Home() {
   return (
     <div className="flex flex-col h-full justify-between ">
       <Header />
-      <Category categoryItems={category} />
+      <Category categoryItems={initalCategory} />
       <div className="flex flex-col h-full">
         {filterItems().map((items: any) => {
           return <Card items={items} key={items[0]?.id}/>;

@@ -17,6 +17,7 @@ const config: Config = {
         'white': '#f2f2f2',
         'white600':'#dddddd',
         'red': '#B43F3F',
+        'red600':'#791a06',
         'blue': '#4682A9',
         'cian': '#91C8E4',
         'gray': '#686D76',

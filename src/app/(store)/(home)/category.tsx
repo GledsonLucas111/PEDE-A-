@@ -12,21 +12,22 @@ interface CategoryProps {
   categoryItems: string[];
 }
 export default function Category({ categoryItems }: CategoryProps) {
-  const [active, setActive] = useState("");
+const [categoryItem, setCategoryItems] = useState(categoryItems[0])
+  
   return (
-    <div className="bg-white600 ">
-      <Swiper slidesPerView={3} className="">
+    <div className="bg-white600">
+      <Swiper slidesPerView={3}>
         {categoryItems.map((category) => {
           return (
-            <SwiperSlide key={category} >
+            <SwiperSlide key={category}>
               <a
-                className={`font-bold text-sm  whitespace-nowrap ${category === "Bolos"? "text-brown ": "text-gray400"}`}
+                className={`font-bold text-sm whitespace-nowrap ${category === categoryItem? "text-brown ": "text-gray400"}`}
                 href={`#${category}`}
+                onClick={()=>setCategoryItems(category)}
               >
                 {category}
-                
               </a>
-              {category === "Bolos"? <p className="w-full border-2 rounded-xl border-brown "/>: null}
+              {category === categoryItem? <p className="w-full border-2 border-brown "/>: null}
             </SwiperSlide>
           );
         })}
