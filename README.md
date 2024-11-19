@@ -16,4 +16,4 @@ bun dev
 
 ## EM DESENVOLVIMENTO...
 
-# Site feito em mobile first
+### Site feito em mobile first
